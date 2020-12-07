@@ -162,10 +162,8 @@ public class HttpClient(
 
             config += this
 
-            if (expectSuccess) {
-                // it's important to install validators last
-                config.addDefaultResponseValidation()
-            }
+            // it's important to install validators last
+            config.addDefaultResponseValidation()
 
             config.install(this@HttpClient)
         }
